@@ -37,7 +37,6 @@ int list_process_directories(void) {
         
     // TODO: Print the total count of process directories found    
     printf("Found %d process directories\n", process_counter);
-    printf("SUCCESS: Process directories listed!\n");
 
     return 0; // Replace with proper error handling
 }
