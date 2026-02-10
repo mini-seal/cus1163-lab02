@@ -1,0 +1,17 @@
+1. How many system calls does each method make? 
+      Each method makes 1 openat() and 1 close() call, with varying amounts of read() calls.  
+            /proc/1/status has 1 openat() call, 1 close() call, and 7 read calls. 
+
+            /proc/1/cmdline has 1 openat() call, 1 close() call, and 2 read calls. 
+
+2. What's the difference between fopen() and open()? 
+
+	fopen() is a library function that runs in user mode and uses system calls internally, which makes file handling easier and safer. 
+
+	open() is a system call that communicates directly with the kernel of the operating system, so it requires careful handling.  
+
+	Based on our lab 2, fopen() makes file handling because it handles many operations internally and requires fewer error checking steps compared to open(). 
+
+3. Why does the library method make different system calls? 
+  
+    The library method makes different system calls because performs many steps and operations internally. When using system calls directly, these operations are done explicitly by the programmer. However, when using library functions like fopen(), the system calls are done behind the scenes, hiding the complexity of the file handeling from the user. 
