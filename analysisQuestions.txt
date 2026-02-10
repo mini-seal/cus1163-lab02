@@ -16,4 +16,4 @@
   
     The library method makes different system calls because performs many steps and operations internally. 
 	When using system calls directly, these operations are done explicitly by the programmer. 
-	However, when using library functions like fopen(), the system calls are done behind the scenes, hiding the complexity of the file handeling from the user. 
+	However, when using library functions like fopen(), the system calls are done behind the scenes, hiding the complexity of the file handling from the user. 
