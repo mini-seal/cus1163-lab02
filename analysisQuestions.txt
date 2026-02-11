@@ -1,8 +1,7 @@
 1. How many system calls does each method make? 
-      Each method makes 1 openat() and 1 close() call, with varying amounts of read() calls.  
-            /proc/1/status has 1 openat() call, 1 close() call, and 7 read calls. 
-
-            /proc/1/cmdline has 1 openat() call, 1 close() call, and 2 read calls. 
+      After reviewing the output in the trace.txt and syscalls.txt files, I determined that:  
+		 “Method 1: Using System Calls” makes 4 system calls: 1 openat(), 2 read(), and 1 close().  
+		 “Method 2: Using Library Functions” makes 5 system calls: 1 openat(), 1 fstat(), 2 read(), and 1 close(). 
 
 2. What's the difference between fopen() and open()? 
 
